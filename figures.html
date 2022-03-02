@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Geometric Figures</title>
+    </head>
+    <body>
+        <header>
+            <h1>Geometric Figures</h1>
+        </header>
+        <section class="mainsection">
+            <h2>Calculate the perimeter and area</h2>
+            <div class="geometric-container">
+                <form class="squareform" action="">
+                    <label for="SquareInput">
+                        Type your square measurement
+                    </label>
+                    <input
+                        id="SquareInput"
+                        type="number"
+                        placeholder="Side Measure"
+                    />
+                    <button type="button" onclick="calculateSquarePerimeter()">
+                        Calculate Perimeter
+                    </button>
+                    <button type="button" onclick="calculateSquareArea()">
+                        Calculate Area
+                    </button>
+                </form>
+                <form class="triangleform" action="">
+                    <label for="TriangleInputSideA"
+                        >Type your triangle measurement</label
+                    >
+                    <input
+                        id="TriangleInputSideA"
+                        type="number"
+                        placeholder="Side A"
+                    />
+                    <input
+                        id="TriangleInputSideB"
+                        type="number"
+                        placeholder="Side B"
+                    />
+                    <input
+                        id="TriangleInputBase"
+                        type="number"
+                        placeholder="Base"
+                    />
+                    <input
+                        id="TriangleInputHeight"
+                        type="number"
+                        placeholder="Height"
+                    />
+                    <button
+                        type="button"
+                        onclick="calculateTrianglePerimeter()"
+                    >
+                        Calculate Perimeter
+                    </button>
+                    <button type="button" onclick="calculateTriangleArea()">
+                        Calculate Area
+                    </button>
+                </form>
+                <form class="circleform" action="">
+                    <label for="">Type your circle radius</label>
+                    <input
+                        id="circleInputRadius"
+                        type="number"
+                        placeholder="Radius"
+                    />
+
+                    <button type="button" onclick="caclulateCirclePerimeter()">
+                        Calculate Perimeter
+                    </button>
+                    <button type="button" onclick="calculateCircleArea()">
+                        Calculate Area
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <script src="./figures.js"></script>
+    </body>
+</html>

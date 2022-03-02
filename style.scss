@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #0d1f22;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+h1 {
+    margin-top: 2em;
+    text-align: center;
+    color: white;
+    margin-bottom: 1em;
+    font-size: 2rem;
+}
+.mainsection {
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5em;
+    }
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    .geometric-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        form {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            padding: 1.5em;
+            box-shadow: -1px 1px 16px 1px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -1px 1px 16px 1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 1px 16px 1px rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3em;
+            min-width: 250px;
+            max-width: 375px;
+            input {
+                border-radius: 5px;
+                text-align: center;
+                border: none;
+                box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+                -webkit-box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+                margin-bottom: 0.6em;
+                min-width: 100px;
+                max-width: 120px;
+            }
+            button {
+                background-color: #0d1f22;
+                color: white;
+                padding: 0.4em;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                min-width: 160px;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            label {
+                margin-bottom: 0.5em;
+            }
+        }
+        .squareform {
+            background-color: #264027;
+        }
+        .triangleform {
+            background: #3c5233;
+        }
+        .circleform {
+            background-color: #6f732f;
+        }
+    }
+}
+@media only screen and (min-width: 900px) {
+    .mainsection .geometric-container {
+        flex-direction: column;
+    }
+}
