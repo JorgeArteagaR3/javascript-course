@@ -23,6 +23,7 @@
                         type="number"
                         placeholder="Side Measure"
                     />
+                    <p class="results"></p>
                     <button type="button" onclick="calculateSquarePerimeter()">
                         Calculate Perimeter
                     </button>
@@ -54,6 +55,7 @@
                         type="number"
                         placeholder="Height"
                     />
+                    <p class="results"></p>
                     <button
                         type="button"
                         onclick="calculateTrianglePerimeter()"
@@ -71,12 +73,20 @@
                         type="number"
                         placeholder="Radius"
                     />
-
+                    <p class="results"></p>
                     <button type="button" onclick="caclulateCirclePerimeter()">
                         Calculate Perimeter
                     </button>
                     <button type="button" onclick="calculateCircleArea()">
                         Calculate Area
+                    </button>
+
+                    <button
+                        class="clearbutton"
+                        type="button"
+                        onclick="clearFunction()"
+                    >
+                        Clear
                     </button>
                 </form>
             </div>

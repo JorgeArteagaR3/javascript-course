@@ -29,15 +29,16 @@ function areaCirculo(radio) {
 function calculateSquarePerimeter() {
     const input = document.getElementById("SquareInput");
     const value = input.value;
-
     const perimetro = perimetroCuadrado(value);
-    alert("El perímetro es " + perimetro);
+    const collection = document.getElementsByClassName("results");
+    collection[0].innerHTML = perimetro;
 }
 function calculateSquareArea() {
     const input = document.getElementById("SquareInput");
     const value = input.value;
     const area = areaCuadrado(value);
-    alert("El área del cuadrado es " + area);
+    const collection = document.getElementsByClassName("results");
+    collection[0].innerHTML = area;
 }
 function calculateTrianglePerimeter() {
     const input1 = document.getElementById("TriangleInputSideA");
@@ -47,7 +48,8 @@ function calculateTrianglePerimeter() {
     const value2 = parseInt(input2.value);
     const value3 = parseInt(base.value);
     const perimeter = perimetroTriangulo(value1, value2, value3);
-    alert("The perimeter of your triangle is " + perimeter);
+    const collection = document.getElementsByClassName("results");
+    collection[1].innerHTML = perimeter;
 }
 function calculateTriangleArea() {
     const base = document.getElementById("TriangleInputBase");
@@ -55,17 +57,24 @@ function calculateTriangleArea() {
     const value1 = parseInt(base.value);
     const value2 = parseInt(height.value);
     const area = areaTriangulo(value1, value2);
-    alert("The area of your triangle is " + area);
+    const collection = document.getElementsByClassName("results");
+    collection[1].innerHTML = area;
 }
 function caclulateCirclePerimeter() {
     const radius = document.getElementById("circleInputRadius");
     const value = parseInt(radius.value);
     const perimeter = perimetroCirculo(value);
-    alert("The perimeter of your circle is: " + perimeter);
+    const collection = document.getElementsByClassName("results");
+    collection[2].innerHTML = parseFloat(perimeter).toFixed(2);
 }
 function calculateCircleArea() {
     const radius = document.getElementById("circleInputRadius");
     const value = parseInt(radius.value);
     const area = areaCirculo(value);
-    alert("The area of your circle is: " + area);
+    const collection = document.getElementsByClassName("results");
+    collection[2].innerHTML = parseFloat(area).toFixed(2);
+}
+function clearFunction() {
+    const collection = document.getElementsByClassName("results");
+    collection[2].innerHTML = "";
 }

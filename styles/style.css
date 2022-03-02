@@ -102,6 +102,23 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+.mainsection .geometric-container form .results {
+  width: 100px;
+  height: 20px;
+  background-color: red;
+  margin-bottom: 0.3em;
+  text-align: center;
+  color: black;
+}
+
+.mainsection .geometric-container form .clearbutton {
+  background-color: white;
+  color: black;
+  margin-top: 1em;
+  min-width: 30px;
+  width: 100px;
+}
+
 .mainsection .geometric-container .squareform {
   background-color: #264027;
 }

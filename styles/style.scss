@@ -74,6 +74,21 @@ h1 {
             label {
                 margin-bottom: 0.5em;
             }
+            .results {
+                width: 100px;
+                height: 20px;
+                background-color: red;
+                margin-bottom: 0.3em;
+                text-align: center;
+                color: black;
+            }
+            .clearbutton {
+                background-color: white;
+                color: black;
+                margin-top: 1em;
+                min-width: 30px;
+                width: 100px;
+            }
         }
         .squareform {
             background-color: #264027;
