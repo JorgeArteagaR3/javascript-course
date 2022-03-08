@@ -74,7 +74,23 @@ function calculateCircleArea() {
     const collection = document.getElementsByClassName("results");
     collection[2].innerHTML = parseFloat(area).toFixed(2);
 }
-function clearFunction() {
+function clearFunction(valor) {
     const collection = document.getElementsByClassName("results");
-    collection[2].innerHTML = "";
+    collection[valor].innerHTML = "";
+}
+function copyButton(valor) {
+    const collection = document.getElementsByClassName("results");
+    const copyText = collection[valor];
+    navigator.clipboard.writeText(copyText.innerHTML);
+    const copybutton = document.getElementsByClassName("tooltiptext");
+
+    if (copyText.innerHTML === "") {
+        copybutton[valor].innerHTML = "Error NAN";
+    } else {
+        copybutton[valor].innerHTML = "Copied: " + copyText.innerHTML;
+    }
+}
+function outCopyButton(valor) {
+    const tooltip = document.getElementsByClassName("tooltiptext");
+    tooltip[valor].innerHTML = "Copy to clipboard";
 }

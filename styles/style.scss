@@ -47,6 +47,49 @@ h1 {
             gap: 0.3em;
             min-width: 250px;
             max-width: 375px;
+            .result-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                position: relative;
+                .copy-button {
+                    min-width: none;
+                    width: 70px;
+                    background-color: black;
+                    position: absolute;
+                    right: calc(50% - 150px);
+                    .tooltiptext {
+                        background-color: #555;
+                        width: 120px;
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 5px;
+                        position: absolute;
+                        z-index: 1;
+                        bottom: 150%;
+                        right: calc(50% - 60px);
+                        transition: opacity 0.3s;
+                        opacity: 0;
+                        display: none;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            margin-left: -5px;
+                            border-width: 5px;
+                            border-style: solid;
+                            border-color: #555 transparent transparent
+                                transparent;
+                        }
+                    }
+
+                    &:hover .tooltiptext {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
             input {
                 border-radius: 5px;
                 text-align: center;
@@ -65,7 +108,7 @@ h1 {
                 border: none;
                 border-radius: 5px;
                 font-size: 1rem;
-                min-width: 160px;
+                width: 160px;
                 cursor: pointer;
                 &:hover {
                     opacity: 0.8;
@@ -77,11 +120,13 @@ h1 {
             .results {
                 width: 100px;
                 height: 20px;
-                background-color: red;
+                background-color: wheat;
                 margin-bottom: 0.3em;
                 text-align: center;
                 color: black;
+                position: relative;
             }
+
             .clearbutton {
                 background-color: white;
                 color: black;
@@ -98,6 +143,21 @@ h1 {
         }
         .circleform {
             background-color: #6f732f;
+        }
+    }
+}
+.discounts-section {
+    width: 100%;
+    h2 {
+        text-align: center;
+    }
+    .discounts-section__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input {
+            text-align: center;
         }
     }
 }

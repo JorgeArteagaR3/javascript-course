@@ -23,12 +23,30 @@
                         type="number"
                         placeholder="Side Measure"
                     />
-                    <p class="results"></p>
+                    <div class="result-container">
+                        <p class="results"></p>
+                        <button
+                            type="button"
+                            class="copy-button"
+                            onclick="copyButton(0)"
+                            onmouseout="outCopyButton(0)"
+                        >
+                            <span class="tooltiptext">Copy to clipboard</span
+                            >Copy Result
+                        </button>
+                    </div>
                     <button type="button" onclick="calculateSquarePerimeter()">
                         Calculate Perimeter
                     </button>
                     <button type="button" onclick="calculateSquareArea()">
                         Calculate Area
+                    </button>
+                    <button
+                        class="clearbutton"
+                        type="button"
+                        onclick="clearFunction(0)"
+                    >
+                        Clear
                     </button>
                 </form>
                 <form class="triangleform" action="">
@@ -55,7 +73,18 @@
                         type="number"
                         placeholder="Height"
                     />
-                    <p class="results"></p>
+                    <div class="result-container">
+                        <p class="results"></p>
+                        <button
+                            type="button"
+                            class="copy-button"
+                            onclick="copyButton(1)"
+                            onmouseout="outCopyButton(1)"
+                        >
+                            <span class="tooltiptext">Copy to clipboard</span
+                            >Copy Result
+                        </button>
+                    </div>
                     <button
                         type="button"
                         onclick="calculateTrianglePerimeter()"
@@ -64,6 +93,13 @@
                     </button>
                     <button type="button" onclick="calculateTriangleArea()">
                         Calculate Area
+                    </button>
+                    <button
+                        class="clearbutton"
+                        type="button"
+                        onclick="clearFunction(1)"
+                    >
+                        Clear
                     </button>
                 </form>
                 <form class="circleform" action="">
@@ -84,13 +120,30 @@
                     <button
                         class="clearbutton"
                         type="button"
-                        onclick="clearFunction()"
+                        onclick="clearFunction(2)"
                     >
                         Clear
                     </button>
                 </form>
             </div>
         </section>
+        <section class="discounts-section">
+            <div>
+                <h2>Percentages and discounts</h2>
+            </div>
+            <form class="discounts-section__form" action="">
+                <label for="InputPrice">Starting Price</label>
+                <input id="InputPrice" type="number" />
+                <label for="InputDiscount">Discount</label>
+                <input id="InputDiscount" type="number" />
+                <button onclick="onClickButtonPriceDiscount()" type="button">
+                    Calculate
+                </button>
+                <label for="InputFinalPrice">Final Price</label>
+                <p id="ResultPrice"></p>
+            </form>
+        </section>
         <script src="./script/figures.js"></script>
+        <script src="./script/discounts.js"></script>
     </body>
 </html>
